@@ -1,0 +1,41 @@
+# Vendored from https://github.com/panr/hugo-theme-terminal (commit 4acd067).
+# Local edits: convert `[[languages.en.params.logo]]` array-of-tables to
+# `[languages.en.params.logo]` single table to match `layouts/partials/logo.html`,
+# which accesses `$.Site.Params.Logo.LogoHomeLink` directly.
+baseurl = "https://example.com/"
+languageCode = "en-us"
+theme = "hugo-theme-terminal"
+pagination.pagerSize = 5
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  contentTypeName = "posts"
+  showMenuItems = 2
+  fullWidthTheme = false
+  centerTheme = false
+
+[languages]
+  [languages.en]
+    title = "Terminal"
+    copyright = ""
+    [languages.en.params]
+      subtitle = "A simple, retro theme for Hugo"
+      keywords = ""
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      [languages.en.params.logo]
+        logoText = "Terminal"
+        logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "showcase"
+        name = "Showcase"
+        url = "/showcase"
