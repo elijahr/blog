@@ -1,0 +1,36 @@
+baseURL = "https://elijahr.github.io/blog/"
+locale = "en-us"
+title = "Elijah's Blog"
+theme = "terminal"
+pagination.pagerSize = 5
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  contentTypeName = "posts"
+  showMenuItems = 2
+  fullWidthTheme = false
+  centerTheme = false
+
+[languages]
+  [languages.en]
+    label = "English"
+    title = "Elijah's Blog"
+    [languages.en.params]
+      subtitle = "Notes and experiments"
+      owner = "Elijah"
+      description = "Personal blog of Elijah."
+      keywords = ""
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      [languages.en.params.logo]
+        logoText = "Elijah's Blog"
+        logoHomeLink = "/blog/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "posts"
+        url = "/posts"
